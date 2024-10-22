@@ -98,6 +98,6 @@ def convert_offline_to_spotify(offline_folder, playlist_name):
         print("No songs found on Spotify.")
 
 # Example usage
-offline_folder = r"I:\New folder\Music\ENGLISH\New folder (8)"
-playlist_name = "English"
+offline_folder = "/path/to/your/music/folder"
+playlist_name = "My Spotify Playlist"
 convert_offline_to_spotify(offline_folder, playlist_name)
