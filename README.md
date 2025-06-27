@@ -5,6 +5,8 @@
 ![Mutagen](https://img.shields.io/badge/Mutagen-1.47.0-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+**Disclaimer**: The majority of this project, including its code and documentation, was created with the assistance of Large Language Models (LLMs). These tools helped streamline development, generate code snippets, and draft documentation. While human oversight ensured quality and accuracy, LLMs played a significant role in the project's creation.
+
 ## Overview
 
 Local Music to Spotify Playlist Creator is a Python application that allows users to convert their offline music collections into Spotify playlists. This enhanced **Terminal Edition** lets you turn your local music folder into a Spotify playlist directly from the terminal. It scans music files (like `.mp3`) for metadata or parses filenames, searches tracks on Spotify, and builds or updates your chosen playlist.
