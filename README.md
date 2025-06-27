@@ -70,14 +70,11 @@ Before using this tool, make sure you have:
 
 2. **Follow the prompts in your terminal**:
 
-   - Choose a local folder (manually type or paste the full path, e.g., `I:\New folder\Music\ENGLISH\New folder (2)`)
+   - Choose a local folder (manually type or paste the full path, e.g., `/path/to/your/songs`)
    - Name the target Spotify playlist
    - Decide whether to scan subfolders
    - Authorize Spotify access in your browser (only once per session)
 
-   ```bash
-   python local_music_to_spotify.py
-   ```
 
 ## Notes
 
