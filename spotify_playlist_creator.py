@@ -37,6 +37,7 @@ def extract_metadata(file_path):
 def clean_filename(filename):
     name = os.path.splitext(filename)[0]
     name = re.sub(r'\(.*?\)', '', name)
+    name = re.sub(r'\[.*?\]', '', name)
     name = name.replace("_", " ").strip()
     return unidecode(name)
 
