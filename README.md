@@ -1,71 +1,83 @@
-# Local Music to Spotify Playlist Creator
+# Local Music to Spotify Playlist Creator — Terminal Edition
+
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
-![Spotipy](https://img.shields.io/badge/Spotipy-2.19.0-green.svg)
-![Mutagen](https://img.shields.io/badge/Mutagen-1.46.0-orange.svg)
+![Spotipy](https://img.shields.io/badge/Spotipy-2.24.0-green.svg)
+![Mutagen](https://img.shields.io/badge/Mutagen-1.47.0-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Overview
 
-Local Music to Spotify Playlist Creator is a Python application that allows users to convert their offline music collections into Spotify playlists. By scanning local MP3 files for metadata (title and artist), this tool searches for the corresponding songs on Spotify and adds them to a user-defined playlist. 
+Local Music to Spotify Playlist Creator is a Python application that allows users to convert their offline music collections into Spotify playlists. This enhanced **Terminal Edition** lets you turn your local music folder into a Spotify playlist directly from the terminal. It scans music files (like `.mp3`) for metadata or parses filenames, searches tracks on Spotify, and builds or updates your chosen playlist.
+
+> 🛠️ No GUI required — this version is designed to run anywhere Python works.
 
 ## Features
 
-- Extracts song title and artist information from local MP3 files.
-- Searches for songs on Spotify using the Spotify API.
-- Creates a new playlist or updates an existing playlist on Spotify.
-- User-friendly output indicating the status of each song added.
+- ✅ Scans local folders (with optional subfolder support)
+- ✅ Extracts song title and artist information from local MP3 files using ID3 or filename guessing
+- ✅ Searches for songs on Spotify using the Spotify Web API
+- ✅ Automatically creates or updates a Spotify playlist
+- ✅ Batches track uploads to handle large collections (up to 100 per call)
+- ✅ User-friendly terminal interface with cross-platform folder tips
+- ✅ User-friendly output indicating the status of each song added
 
 ## Prerequisites
 
-To run this application, you'll need:
+Before using this tool, make sure you have:
 
-- Python 3.x installed on your system.
-- A Spotify account (free or premium).
-- An application registered on the Spotify Developer Dashboard to obtain your API credentials.
+- Python 3.13 or later installed
+- A Spotify account (Free or Premium)
+- Spotify Developer credentials from [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+- An active internet connection to search for songs on Spotify
 
 ## Installation
 
-1. **Clone the repository**:
+1. **Fork or clone the repository**:
 
    ```bash
    git clone https://github.com/yourusername/local-music-to-spotify-playlist-creator.git
    cd local-music-to-spotify-playlist-creator
    ```
 
-2. **Set up a virtual environment** (optional but recommended):
+2. **(Optional) Create a virtual environment**:
 
    ```bash
-   python -m venv venv
-   venv\Scripts\activate
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. **Install the required packages**:
+3. **Install required packages**:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Create a `.env` file** in the project directory and add your Spotify API credentials:
+4. **Add your Spotify credentials to a `.env` file**:
 
-   ```plaintext
-   SPOTIPY_CLIENT_ID='your_spotify_client_id'
-   SPOTIPY_CLIENT_SECRET='your_spotify_client_secret'
-   SPOTIPY_REDIRECT_URI='http://localhost:8888/callback'
+   ```env
+   SPOTIPY_CLIENT_ID=your_spotify_client_id
+   SPOTIPY_CLIENT_SECRET=your_spotify_client_secret
+   SPOTIPY_REDIRECT_URI=http://127.0.0.1:8000/callback
    ```
-
-   
 
 ## Usage
 
-1. Place your local MP3 files in a folder (e.g., `I:\New folder\Music\ENGLISH\New folder (2)`).
-2. Modify the `offline_folder` and `playlist_name` variables in the script to point to your local folder and desired playlist name, respectively.
-3. Run the script:
+1. **Run the script**:
+
+   ```bash
+   python spotify_playlist_creator.py
+   ```
+
+2. **Follow the prompts in your terminal**:
+
+   - Choose a local folder (manually type or paste the full path, e.g., `I:\New folder\Music\ENGLISH\New folder (2)`)
+   - Name the target Spotify playlist
+   - Decide whether to scan subfolders
+   - Authorize Spotify access in your browser (only once per session)
 
    ```bash
    python local_music_to_spotify.py
    ```
-
-4. Follow the authentication process in your browser to allow the app to access your Spotify account.
 
 ## Notes
 
@@ -78,5 +90,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgments
 
+- This project is a fork and enhancement of the original [Local Music to Spotify Playlist Creator](https://github.com/xectrone/local-music-to-spotify-playlist-creator) by [xectrone](https://github.com/xectrone).
 - [Spotipy](https://spotipy.readthedocs.io/en/2.19.0/) - A lightweight Python library for the Spotify Web API.
 - [Mutagen](https://mutagen.readthedocs.io/en/latest/) - A Python module to handle audio metadata.
