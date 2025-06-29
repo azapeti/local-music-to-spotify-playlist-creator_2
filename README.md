@@ -87,7 +87,7 @@ This tool can extract detailed metadata about the songs added to your Spotify pl
 
 - The application currently supports MP3 files. You can modify the code to support other formats if desired.
 - Ensure that you have an active internet connection to search for songs and retrieve data from Spotify.
-- The extracted data in `track_info.json` is formatted for easy parsing and can be used with data analysis tools like Python's `pandas`, R, or Excel.
+- The extracted data in `track_info.json` is formatted for easy parsing and can be used with data analysis tools like Python's `pandas`, or R.
 
 ## License
 
