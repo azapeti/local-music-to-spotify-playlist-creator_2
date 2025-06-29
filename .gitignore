@@ -3,3 +3,5 @@ venv/
 .vscode/
 .cache/
 .DS_Store
+track_info.json
+data_tester.py
